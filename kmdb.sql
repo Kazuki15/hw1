@@ -131,8 +131,8 @@ CREATE TABLE movies (
   studio_id INTEGER
 );
 
--- 5. Create casting Table
-CREATE TABLE casting (
+-- 5. Create roles Table
+CREATE TABLE roles (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   movie_id INTEGER,
   actor_id INTEGER,
@@ -148,9 +148,7 @@ INSERT INTO studios VALUES (1, 'Warner Bros.');
 -- movies
 
 INSERT INTO movies VALUES (1, 'Batman Begins', 2005, 'PG-13', 1);
-
 INSERT INTO movies VALUES (2, 'The Dark Knight', 2008, 'PG-13', 1);
-
 INSERT INTO movies VALUES (3, 'The Dark Knight Rises', 2012, 'PG-13', 1);
 
 -- agents
@@ -200,7 +198,7 @@ WHERE name = 'Christian Bale';
 
 -- ***TODO!***
 -- The SQL statement for the movies output goes here.
-SELECT m.title, m.year, m.rating, s.name
+SELECT m.title, m.year_released, m.mpaa_rating, s.name
 FROM movies m
 JOIN studios s ON m.studio_id = s.id;
 -- Example output:
