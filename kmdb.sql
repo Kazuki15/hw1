@@ -265,7 +265,9 @@ INSERT INTO roles VALUES (15,3,11,'Selina Kyle');
 
 -- ***TODO!***
 -- The SQL statement for the represented actor(s) output goes here.
-
+UPDATE actors
+SET agent_id = 1
+WHERE name = 'Christian Bale';
 -- Example output:
 -- Represented by agent
 -- ====================
