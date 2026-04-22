@@ -95,13 +95,124 @@
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
-
+DROP TABLE IF EXISTS roles;
+DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS agents;
+DROP TABLE IF EXISTS studios;
 -- Create new tables, according to your domain model
 -- TODO!
 
+-- 1. creat studio tables
+CREATE TABLE studios (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT
+);
+
+-- 2. Create agents Table
+CREATE TABLE agents (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT
+);
+
+-- 3. Create actors Table
+CREATE TABLE actors (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  agent_id INTEGER
+);
+
+-- 4. Creat movies Table
+CREATE TABLE movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  year_released INTEGER,
+  mpaa_rating TEXT,
+  studio_id INTEGER
+);
+
+-- 5. Create casting Table
+CREATE TABLE casting (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  movie_id INTEGER,
+  actor_id INTEGER,
+  character_name TEXT
+);
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+-- studios
+
+INSERT INTO studios VALUES (1, 'Warner Bros.');
+
+-- movies
+
+INSERT INTO movies VALUES (1, 'Batman Begins', 2005, 'PG-13', 1);
+
+INSERT INTO movies VALUES (2, 'The Dark Knight', 2008, 'PG-13', 1);
+
+INSERT INTO movies VALUES (3, 'The Dark Knight Rises', 2012, 'PG-13', 1);
+
+-- agents
+
+INSERT INTO agents VALUES (1, 'Agent Smith');
+
+-- actors
+
+INSERT INTO actors VALUES (1, 'Christian Bale', NULL);
+
+INSERT INTO actors VALUES (2, 'Michael Caine', NULL);
+
+INSERT INTO actors VALUES (3, 'Liam Neeson', NULL);
+
+INSERT INTO actors VALUES (4, 'Katie Holmes', NULL);
+
+INSERT INTO actors VALUES (5, 'Gary Oldman', NULL);
+
+INSERT INTO actors VALUES (6, 'Heath Ledger', NULL);
+
+INSERT INTO actors VALUES (7, 'Aaron Eckhart', NULL);
+
+INSERT INTO actors VALUES (8, 'Maggie Gyllenhaal', NULL);
+
+INSERT INTO actors VALUES (9, 'Tom Hardy', NULL);
+
+INSERT INTO actors VALUES (10, 'Joseph Gordon-Levitt', NULL);
+
+INSERT INTO actors VALUES (11, 'Anne Hathaway', NULL);
+
+-- roles
+
+INSERT INTO roles VALUES (1,1,1,'Bruce Wayne');
+
+INSERT INTO roles VALUES (2,1,2,'Alfred');
+
+INSERT INTO roles VALUES (3,1,3,'Ra''s Al Ghul');
+
+INSERT INTO roles VALUES (4,1,4,'Rachel Dawes');
+
+INSERT INTO roles VALUES (5,1,5,'Commissioner Gordon');
+
+INSERT INTO roles VALUES (6,2,1,'Bruce Wayne');
+
+INSERT INTO roles VALUES (7,2,6,'Joker');
+
+INSERT INTO roles VALUES (8,2,7,'Harvey Dent');
+
+INSERT INTO roles VALUES (9,2,2,'Alfred');
+
+INSERT INTO roles VALUES (10,2,8,'Rachel Dawes');
+
+INSERT INTO roles VALUES (11,3,1,'Bruce Wayne');
+
+INSERT INTO roles VALUES (12,3,5,'Commissioner Gordon');
+
+INSERT INTO roles VALUES (13,3,9,'Bane');
+
+INSERT INTO roles VALUES (14,3,10,'John Blake');
+
+INSERT INTO roles VALUES (15,3,11,'Selina Kyle');
+
 
 -- Prints a header for the movies output
 .print "Movies"
