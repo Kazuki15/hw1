@@ -160,57 +160,33 @@ INSERT INTO agents VALUES (1, 'Agent Smith');
 -- actors
 
 INSERT INTO actors VALUES (1, 'Christian Bale', NULL);
-
 INSERT INTO actors VALUES (2, 'Michael Caine', NULL);
-
 INSERT INTO actors VALUES (3, 'Liam Neeson', NULL);
-
 INSERT INTO actors VALUES (4, 'Katie Holmes', NULL);
-
 INSERT INTO actors VALUES (5, 'Gary Oldman', NULL);
-
 INSERT INTO actors VALUES (6, 'Heath Ledger', NULL);
-
 INSERT INTO actors VALUES (7, 'Aaron Eckhart', NULL);
-
 INSERT INTO actors VALUES (8, 'Maggie Gyllenhaal', NULL);
-
 INSERT INTO actors VALUES (9, 'Tom Hardy', NULL);
-
 INSERT INTO actors VALUES (10, 'Joseph Gordon-Levitt', NULL);
-
 INSERT INTO actors VALUES (11, 'Anne Hathaway', NULL);
 
 -- roles
 
 INSERT INTO roles VALUES (1,1,1,'Bruce Wayne');
-
 INSERT INTO roles VALUES (2,1,2,'Alfred');
-
 INSERT INTO roles VALUES (3,1,3,'Ra''s Al Ghul');
-
 INSERT INTO roles VALUES (4,1,4,'Rachel Dawes');
-
 INSERT INTO roles VALUES (5,1,5,'Commissioner Gordon');
-
 INSERT INTO roles VALUES (6,2,1,'Bruce Wayne');
-
 INSERT INTO roles VALUES (7,2,6,'Joker');
-
 INSERT INTO roles VALUES (8,2,7,'Harvey Dent');
-
 INSERT INTO roles VALUES (9,2,2,'Alfred');
-
 INSERT INTO roles VALUES (10,2,8,'Rachel Dawes');
-
 INSERT INTO roles VALUES (11,3,1,'Bruce Wayne');
-
 INSERT INTO roles VALUES (12,3,5,'Commissioner Gordon');
-
 INSERT INTO roles VALUES (13,3,9,'Bane');
-
 INSERT INTO roles VALUES (14,3,10,'John Blake');
-
 INSERT INTO roles VALUES (15,3,11,'Selina Kyle');
 
 UPDATE actors
